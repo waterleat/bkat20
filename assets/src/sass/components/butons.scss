@@ -1,0 +1,32 @@
+@responsive {
+  .btn {
+    @apply .font-bold .py-2 .px-4 .rounded-full .text-center .cursor-pointer ;
+  }
+  .btn-small {
+    @apply .font-bold .py-1 .px-2 .rounded-full .text-center .cursor-pointer ;
+  }
+}
+
+.btn-blue {
+  @apply .bg-blue-600 .text-white ;
+  // a{
+  //   &,
+  //   &:visited {
+  //     color: white;
+  //   }
+  // }
+
+}
+.btn-blue:hover {
+  @apply .bg-blue-800 ;
+}
+
+.btn-gray {
+  @apply .bg-gray-300 .text-black ;
+}
+
+a.stay-white {
+  &:visited {
+    color: white;
+  }
+}
