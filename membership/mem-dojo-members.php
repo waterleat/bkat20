@@ -122,7 +122,7 @@ $membersQuery = $mydb->get_results($mydb->prepare(
                 <input type="hidden" name="member" value="<?php echo  esc_html($member['Memberno']) ?>">
                 <input type="hidden" name="person" value="<?php echo  esc_html($member['Forename']), ' ',  esc_html($member['Surname']) ?>">
                 <input type="hidden" name="status" value="<?php echo  esc_html($member['status']) ?>">
-                <input type="submit" value="Change" class="changeCoach btn-small btn-gray border border-blue-500">
+                <input type="submit" value="Change" class="changeCoach btn-small btn-gray ">
               </form>
             </td>
           </tr>

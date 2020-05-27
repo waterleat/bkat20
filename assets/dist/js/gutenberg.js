@@ -104,6 +104,7 @@
 // // require( './blocks/step-four.js' );
 // require( './blocks/step-five.js' );
 // require( './blocks/step-six.js' );
+// require( './blocks/cta.js' );
 
 /***/ }),
 
@@ -114,7 +115,7 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /home/d/beta/wp-content/themes/bka2018/assets/src/scripts/gutenberg.js */"./assets/src/scripts/gutenberg.js");
+module.exports = __webpack_require__(/*! /home/d/sites/bka01/wp-content/themes/bka2020/assets/src/scripts/gutenberg.js */"./assets/src/scripts/gutenberg.js");
 
 
 /***/ })

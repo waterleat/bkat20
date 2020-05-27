@@ -201,9 +201,7 @@ function _createClass(Constructor, protoProps, staticProps) {
   return Constructor;
 }
 
-var App =
-/*#__PURE__*/
-function () {
+var App = /*#__PURE__*/function () {
   function App() {
     _classCallCheck(this, App);
 
@@ -272,9 +270,7 @@ function _createClass(Constructor, protoProps, staticProps) {
   return Constructor;
 }
 
-var SmallNav =
-/*#__PURE__*/
-function () {
+var SmallNav = /*#__PURE__*/function () {
   function SmallNav() {
     _classCallCheck(this, SmallNav);
 
@@ -318,12 +314,12 @@ function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /home/d/beta/wp-content/themes/bka2018/assets/src/scripts/app.js */"./assets/src/scripts/app.js");
-__webpack_require__(/*! /home/d/beta/wp-content/themes/bka2018/assets/src/sass/style.scss */"./assets/src/sass/style.scss");
-__webpack_require__(/*! /home/d/beta/wp-content/themes/bka2018/assets/src/sass/admin.scss */"./assets/src/sass/admin.scss");
-__webpack_require__(/*! /home/d/beta/wp-content/themes/bka2018/assets/src/sass/front.scss */"./assets/src/sass/front.scss");
-__webpack_require__(/*! /home/d/beta/wp-content/themes/bka2018/assets/src/sass/gutenberg.scss */"./assets/src/sass/gutenberg.scss");
-module.exports = __webpack_require__(/*! /home/d/beta/wp-content/themes/bka2018/assets/src/sass/editor.scss */"./assets/src/sass/editor.scss");
+__webpack_require__(/*! /home/d/sites/bka01/wp-content/themes/bka2020/assets/src/scripts/app.js */"./assets/src/scripts/app.js");
+__webpack_require__(/*! /home/d/sites/bka01/wp-content/themes/bka2020/assets/src/sass/style.scss */"./assets/src/sass/style.scss");
+__webpack_require__(/*! /home/d/sites/bka01/wp-content/themes/bka2020/assets/src/sass/admin.scss */"./assets/src/sass/admin.scss");
+__webpack_require__(/*! /home/d/sites/bka01/wp-content/themes/bka2020/assets/src/sass/front.scss */"./assets/src/sass/front.scss");
+__webpack_require__(/*! /home/d/sites/bka01/wp-content/themes/bka2020/assets/src/sass/gutenberg.scss */"./assets/src/sass/gutenberg.scss");
+module.exports = __webpack_require__(/*! /home/d/sites/bka01/wp-content/themes/bka2020/assets/src/sass/editor.scss */"./assets/src/sass/editor.scss");
 
 
 /***/ })

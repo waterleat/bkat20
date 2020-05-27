@@ -3,7 +3,6 @@
 --------------------------------------------------------------*/
 
 .wp-core-ui .button-primary {
-  -webkit-transition: all ease;
   transition: all ease;
   background: #27c5be;
   border-color: #00ffc1 #07ca70 #00ca63;

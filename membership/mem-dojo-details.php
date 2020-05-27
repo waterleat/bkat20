@@ -49,6 +49,7 @@ $dojoInfo = $mydb->get_row($mydb->prepare(
   "SELECT * FROM $table_dojo WHERE Dojono = %d",
   $dojono
 ), 'ARRAY_A');
+if ($dojoInfo['SecretaryBKANo']==0) $dojoInfo['SecretaryBKANo']=" ";
 // var_dump($dojoInfo);
 
 $practice = $mydb->get_results($mydb->prepare(
@@ -81,6 +82,11 @@ $secretary = $mydb->get_row($mydb->prepare(
   $dojono
 ), 'ARRAY_A');
 // var_dump($secretary);
+if ($secretary==NULL) {
+  $secretary['Forename']=" ";
+  $secretary['Surname']=" ";
+  // var_dump($secretary);
+}
 
 $officer = $mydb->get_row($mydb->prepare(
   "SELECT Forename,Surname
@@ -89,6 +95,11 @@ $officer = $mydb->get_row($mydb->prepare(
   $dojono
 ), 'ARRAY_A');
 // var_dump($officer);
+if ($officer==NULL) {
+  $officer['Forename']=" ";
+  $officer['Surname']=" ";
+  // var_dump($officer);
+}
 
 $coaches = $mydb->get_results($mydb->prepare(
   "SELECT Memberno,Forename,Surname,Level,cbu,c.Insurance,PaidByDojo,CRB,c.Renewaldue

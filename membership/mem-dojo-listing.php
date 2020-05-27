@@ -217,7 +217,7 @@
                   <input type="hidden" name="jodo" value="<?php echo  esc_html($row['jodo']) ?>">
                   <input type="hidden" name="bkano" value="<?php echo  $bkano ?>">
                   <input type="hidden" name="status" value="<?php echo  esc_html($row['status']) ?>">
-                  <input type="submit" value="Apply" class="applyDojo rounded cursor-pointer">
+                  <input type="submit" value="Apply" class="applyDojo btn-small btn-gray">
                 </form>
               </td>
             <?php } ?>

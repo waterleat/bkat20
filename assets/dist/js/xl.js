@@ -133,7 +133,7 @@ document.addEventListener('DOMContentLoaded', function (e) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /home/d/beta/wp-content/themes/bka2018/assets/src/scripts/xl.js */"./assets/src/scripts/xl.js");
+module.exports = __webpack_require__(/*! /home/d/sites/bka01/wp-content/themes/bka2020/assets/src/scripts/xl.js */"./assets/src/scripts/xl.js");
 
 
 /***/ })

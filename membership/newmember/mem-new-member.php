@@ -35,7 +35,7 @@ $error = ''; // $_SESSION("varerr")
 
 
 <h2 class="my-0 bg-gray-400 py-2 text-center">New Member Details</h2>
-<div class="p-4 xs:pl-16 md:pl-4 flex flex-col md:flex-row">
+<div class="p-4 xs:pl-16 md:pl-4 flex flex-col md:flex-row bg-white">
   <div class="flex flex-col w-full md:w-1/2">
 
     <div class="flex pt-2 flex-wrap xs:flex-no-wrap">
@@ -190,9 +190,9 @@ $error = ''; // $_SESSION("varerr")
     </div>
   </div>
 </div>
-<div class="flex pt-2 justify-around">
+<div class="flex py-2 justify-around bg-white">
   <input type="button" id="FormsButton4" name="Cancel" tabindex="21" value="Cancel" class="btn btn-blue">
   <input type="submit" id="FormsButton3" name="Submit" tabindex="22" value="Submit" class="btn btn-blue">
 
 </div>
-<p><span style="color: rgb(255,0,0);"><?php echo $error; ?></span></p>
+<p class="bg-white"><span style="color: rgb(255,0,0);"><?php echo $error; ?></span></p>

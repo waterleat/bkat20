@@ -1,6 +1,6 @@
 {
   "name": "Bka2018",
-  "version": "3.0.4.1",
+  "version": "3.0.4",
   "description": "Alecaddd WordPress Starter Theme for savvy developers",
   "main": "index.js",
   "scripts": {
@@ -11,22 +11,22 @@
     "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
   },
   "devDependencies": {
-    "@babel/preset-react": "^7.0.0",
+    "@babel/preset-react": "^7.9.4",
     "axios": "^0.18.1",
     "babel-preset-react": "^6.24.1",
-    "bootstrap": "^4.3.1",
+    "bootstrap": "^4.5.0",
     "browser-sync": "^2.26.7",
     "browser-sync-webpack-plugin": "^2.0.1",
-    "cross-env": "^5.1",
-    "jquery": "^3.4.1",
-    "laravel-mix": "^4.0.16",
-    "lodash": "^4.17.11",
-    "popper.js": "^1.15.0",
-    "sass": "^1.20.1",
-    "sass-loader": "^7.1.0",
-    "tailwindcss": "^1.0",
-    "vue": "^2.6.10",
-    "vue-template-compiler": "^2.6.10"
+    "cross-env": "^5.2.1",
+    "jquery": "^3.5.1",
+    "laravel-mix": "^4.1.4",
+    "lodash": "^4.17.15",
+    "popper.js": "^1.16.1",
+    "sass": "^1.26.5",
+    "sass-loader": "^7.3.1",
+    "tailwindcss": "^1.4.6",
+    "vue": "^2.6.11",
+    "vue-template-compiler": "^2.6.11"
   },
   "repository": {
     "type": "git",
@@ -45,6 +45,6 @@
   "homepage": "https://github.com/waterleat/bka2018#readme",
   "dependencies": {
     "jscs": "^3.0.7",
-    "jshint": "^2.10.2"
+    "jshint": "^2.11.1"
   }
 }

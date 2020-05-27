@@ -78,7 +78,6 @@
 }
 
 .wp-block-columns {
-  display: -webkit-box;
   display: flex;
   flex-wrap: nowrap;
 }

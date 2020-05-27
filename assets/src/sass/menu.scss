@@ -158,10 +158,11 @@ ul#primary-menu {
   // @apply .text-sm  ; // li-px-2 li-py-2  md:flex md:justify-end
   @apply .inline-flex ;
   // position: relative;
+  @apply .list-none .p-0 ;
 
   li.menu-item-has-children {
     ul.dropdown-menu {
-      @apply .hidden  ;
+      @apply .hidden  .p-0 ;
       // position: relative;
 
       // left: -20px;

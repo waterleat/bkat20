@@ -21,7 +21,7 @@
 
 	<footer id="colophon" class="site-footer container-fluid" role="contentinfo">
 
-		<div class="inner py-8 flex flex-col md:flex-row">
+		<div class="inner py-8 bg-gray-300 flex flex-col md:flex-row">
 			<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("AboveFooter") ) : ?>
 			<?php endif;?>
 		</div>

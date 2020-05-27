@@ -32,7 +32,7 @@ $number = get_post_meta($post_id, '_slideshow_number', true);
 
   <div id="primary" class="content-area w-full md:w-2/3 p-4">
     <main id="main" class="site-main" role="main">
-      <div class="border-b-2 border-dkblue pb-6 mb-8">
+      <div class="front-page border-b-2 border-dkblue pb-6 mb-8">
         <?php
         /* Start the Loop */
         while ( have_posts() ) :

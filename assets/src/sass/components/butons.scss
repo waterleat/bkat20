@@ -7,6 +7,13 @@
   }
 }
 
+@screen md {
+  .btn {
+    @apply .ml-0 ;
+  }
+
+}
+
 .btn-blue {
   @apply .bg-blue-600 .text-white ;
   // a{
@@ -22,7 +29,10 @@
 }
 
 .btn-gray {
-  @apply .bg-gray-300 .text-black ;
+  @apply .bg-gray-300 .text-black border border-blue-500;
+  &:hover {
+    @apply .bg-gray-500 border border-gray-600
+  }
 }
 
 a.stay-white {
