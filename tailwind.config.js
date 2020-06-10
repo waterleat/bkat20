@@ -1,4 +1,13 @@
 module.exports = {
+  purge: [
+    './*.php',
+    './inc/**/*.php',
+    './membership/**/*.php',
+    './page-templates/**/*.php',
+    './views/**/*.php',
+    './assets/src/**/*.scss',
+    './assets/src/**/*.js',
+  ],
   theme: {
     fontFamily: {
       body: ['Lucida Sans Unicode','Lucida Grande','Garuda','sans-serif']

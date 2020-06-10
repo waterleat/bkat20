@@ -256,7 +256,8 @@ $drccount= count($drc);
   </div>
 
   <?php
-  if( ($bkano == $dojoInfo['LeaderBKANo']) || ($bkano == $dojoInfo['SecretaryBKANo']) || ($bkano == $dojoInfo['OfficialBKANo']) || (get_current_user_id()==8) ) {
+  // officers of dojo and administrator role
+  if( ($bkano == $dojoInfo['LeaderBKANo']) || ($bkano == $dojoInfo['SecretaryBKANo']) || ($bkano == $dojoInfo['OfficialBKANo']) || current_user_can( 'manage_options' ) ) {
   ?>
     <div class="">
       <div class="mt-2 bg-pink-300 w-full">

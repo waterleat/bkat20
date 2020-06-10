@@ -98,16 +98,13 @@
         </td>
         <td>
           <input type="hidden" name="nonce" value="<?php echo wp_create_nonce( 'filter_dojo_list_nonce' )?>">
-          <input type="submit" id="dojoFilter" name="dojoFilter" value="Filter"  class="py-1 px-2 border border-black cursor-pointer rounded" data-url="<?php echo get_page_link( $post->ID ) ?>">
+          <input type="submit" id="dojoFilter" name="dojoFilter" value="Filter"  class="btn-blue py-1 px-2 border border-black cursor-pointer rounded" data-url="<?php echo get_page_link( $post->ID ) ?>">
         </td>
         <td></td>
       </form>
     </tr>
 
 
-    <!-- <div class="">
-
-    </div> -->
 
     <?php
       $total = $mydb->query(" SELECT * FROM $table_dojo WHERE 1 $f");

@@ -1,118 +1,118 @@
-const mapStyle = [
-  {
-    "featureType": "administrative",
-    "elementType": "all",
-    "stylers": [
-      {
-        "visibility": "on"
-      },
-      {
-        "lightness": 33
-      }
-    ]
-  },
-  {
-    "featureType": "landscape",
-    "elementType": "all",
-    "stylers": [
-      {
-        "color": "#f2e5d4"
-      }
-    ]
-  },
-  {
-    "featureType": "poi.park",
-    "elementType": "geometry",
-    "stylers": [
-      {
-        "color": "#c5dac6"
-      }
-    ]
-  },
-  {
-    "featureType": "poi.park",
-    "elementType": "labels",
-    "stylers": [
-      {
-        "visibility": "on"
-      },
-      {
-        "lightness": 20
-      }
-    ]
-  },
-  {
-    "featureType": "road",
-    "elementType": "all",
-    "stylers": [
-      {
-        "lightness": 20
-      }
-    ]
-  },
-  {
-    "featureType": "road.highway",
-    "elementType": "geometry",
-    "stylers": [
-      {
-        "color": "#c5c6c6"
-      }
-    ]
-  },
-  {
-    "featureType": "road.arterial",
-    "elementType": "geometry",
-    "stylers": [
-      {
-        "color": "#e4d7c6"
-      }
-    ]
-  },
-  {
-    "featureType": "road.local",
-    "elementType": "geometry",
-    "stylers": [
-      {
-        "color": "#fbfaf7"
-      }
-    ]
-  },
-  {
-    "featureType": "water",
-    "elementType": "all",
-    "stylers": [
-      {
-        "visibility": "on"
-      },
-      {
-        "color": "#acbcc9"
-      }
-    ]
-  }
-];
+// const mapStyle = [
+//   {
+//     "featureType": "administrative",
+//     "elementType": "all",
+//     "stylers": [
+//       {
+//         "visibility": "on"
+//       },
+//       {
+//         "lightness": 33
+//       }
+//     ]
+//   },
+//   {
+//     "featureType": "landscape",
+//     "elementType": "all",
+//     "stylers": [
+//       {
+//         "color": "#f2e5d4"
+//       }
+//     ]
+//   },
+//   {
+//     "featureType": "poi.park",
+//     "elementType": "geometry",
+//     "stylers": [
+//       {
+//         "color": "#c5dac6"
+//       }
+//     ]
+//   },
+//   {
+//     "featureType": "poi.park",
+//     "elementType": "labels",
+//     "stylers": [
+//       {
+//         "visibility": "on"
+//       },
+//       {
+//         "lightness": 20
+//       }
+//     ]
+//   },
+//   {
+//     "featureType": "road",
+//     "elementType": "all",
+//     "stylers": [
+//       {
+//         "lightness": 20
+//       }
+//     ]
+//   },
+//   {
+//     "featureType": "road.highway",
+//     "elementType": "geometry",
+//     "stylers": [
+//       {
+//         "color": "#c5c6c6"
+//       }
+//     ]
+//   },
+//   {
+//     "featureType": "road.arterial",
+//     "elementType": "geometry",
+//     "stylers": [
+//       {
+//         "color": "#e4d7c6"
+//       }
+//     ]
+//   },
+//   {
+//     "featureType": "road.local",
+//     "elementType": "geometry",
+//     "stylers": [
+//       {
+//         "color": "#fbfaf7"
+//       }
+//     ]
+//   },
+//   {
+//     "featureType": "water",
+//     "elementType": "all",
+//     "stylers": [
+//       {
+//         "visibility": "on"
+//       },
+//       {
+//         "color": "#acbcc9"
+//       }
+//     ]
+//   }
+// ];
 
-function initMap() {
-  // get user location if possible
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(function (position) {
-      initialLocation = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
-      map.setCenter(initialLocation);
-    });
-  } else {
-    alert('Browers does not support geolocation');
-    initialLocation = new google.maps.LatLng( 54, -1);
-  }
-
+function initDojoMap() {
   var initialLocation;
+  // // get user location if possible
+  // if (navigator.geolocation) {
+  //   navigator.geolocation.getCurrentPosition(function (position) {
+  //     initialLocation = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+  //     // map.setCenter(initialLocation);
+  //   });
+  // } else {
+  //   alert('Browers does not support geolocation');
+    initialLocation = new google.maps.LatLng( 54, -1);
+  // }
+  //
   var mapOptions = {
     // mapTypeId: 'roadmap',
-    zoom: 8,
-    // center: {lat: -34.397, lng: 150.644}
+    zoom: 7,
     center: initialLocation,
-    styles: mapStyle
+    // center: {lat: 51.397, lng: 0.644}
+    // styles: mapStyle
   };
   // Create the map.
-  const map = new google.maps.Map(document.getElementsByClassName('map')[0],
+  const map = new google.maps.Map(document.getElementById('ukmap'),
     mapOptions
     // {
     //   zoom: 7,
@@ -121,7 +121,7 @@ function initMap() {
     // }
   );
 
-  // Load the stores GeoJSON onto the map.
+  // Load the dojo GeoJSON onto the map.
   map.data.loadGeoJson('/dojo.json');
   // map.data.loadGeoJson('/wp-content/themes/bka2018/assets/dist/dojo.json');
   // map.data.loadGeoJson('/wp-content/plugins/bka2019ds/assets/dojo.json');
@@ -130,7 +130,7 @@ function initMap() {
   map.data.setStyle(feature => {
     return {
       icon: {
-        url: `/wp-content/themes/bka2018/assets/dist/images/membership/icon_${feature.getProperty('category')}.png`,
+        url: `/wp-content/themes/bka2020/assets/dist/images/membership/icon_${feature.getProperty('category')}.png`,
         scaledSize: new google.maps.Size(32, 32)
       }
     };
