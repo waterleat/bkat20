@@ -12,7 +12,7 @@
       wp_nav_menu( array(
         'theme_location' => $bu,
         'menu_id' => $bu.'-menu-'.$size,
-        'walker' => new Bka2018\Core\WalkerNav(),
+        'walker' => new Bka2020\Core\WalkerNav(),
         'container' => 'ul',
         'menu_class' => 'bu-menu  text-lg  li-px-2 li-py-1 md:justify-end '.$menuclass,
       ) );
