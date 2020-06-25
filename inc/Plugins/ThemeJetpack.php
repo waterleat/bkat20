@@ -5,7 +5,7 @@
  * @link https://jetpack.com/
  */
 
-namespace Bka2018\Plugins;
+namespace Bka2020\Plugins;
 
 use Jetpack;
 

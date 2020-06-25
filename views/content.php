@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package Bka2018
+ * @package Bka2020
  */
 
 ?>
@@ -17,7 +17,7 @@
 				if ( 'post' === get_post_type() ) { ?>
 					<div class="entry-meta mb-4">
 						<?php
-						Bka2018\Core\Tags::posted_on();
+						Bka2020\Core\Tags::posted_on();
 						?>
 					</div><!-- .entry-meta -->
 					<?php
@@ -35,7 +35,7 @@
 			<?php
 				the_content( sprintf(
 						/* translators: %s: Name of current post. */
-						wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'Bka2018' ), array(
+						wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'Bka2020' ), array(
 							'span' => array(
 								'class' => array(),
 							),
@@ -43,7 +43,7 @@
 						the_title( '<span class="screen-reader-text">"', '"</span>', false ) ) );
 
 				wp_link_pages( array(
-					'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'Bka2018' ),
+					'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'Bka2020' ),
 					'after'  => '</div>',
 				) );
 			?>
@@ -69,7 +69,7 @@
 				the_excerpt();
 
 			// wp_link_pages( array(
-			// 	'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'Bka2018' ),
+			// 	'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'Bka2020' ),
 			// 	'after' => '</div>',
 			// ) );
 			?>
@@ -77,6 +77,6 @@
 	}?>
 
 	<footer class="entry-footer mt-4 mb-8 flex justify-between">
-		<?php // Bka2018\Core\Tags::entry_footer(); ?>
+		<?php // Bka2020\Core\Tags::entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->

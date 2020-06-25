@@ -9,7 +9,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package Bka2018
+ * @package Bka2020
  */
 
 get_header(); ?>

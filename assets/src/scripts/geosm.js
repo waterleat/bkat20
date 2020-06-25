@@ -26,7 +26,7 @@
   // console.log(address);
 
 
-function initMap() {
+function initddMap() {
   // var geocoder = new google.maps.Geocoder();
   // map = new google.maps.Map(document.getElementById('map'), {
   //   zoom: 8,

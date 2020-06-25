@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package Bka2018
+ * @package Bka2020
  */
 
 ?>
@@ -15,7 +15,7 @@
 
 	<?php
 	if ( is_customize_preview() ) {
-		echo '<div id="Bka2018-footer-control" style="margin-top:-30px;position:absolute;"></div>';
+		echo '<div id="Bka2020-footer-control" style="margin-top:-30px;position:absolute;"></div>';
 	}
 	?>
 
@@ -26,10 +26,10 @@
 			<?php endif;?>
 		</div>
 
-		<p class="site-info p-4 bg-white w-full" <?php if ( is_customize_preview() ) echo 'id="Bka2018-footer-copy-control"'; ?>>
+		<p class="site-info p-4 bg-white w-full" <?php if ( is_customize_preview() ) echo 'id="Bka2020-footer-copy-control"'; ?>>
 			<?php
 
-				echo Bka2018\Api\Customizer::text( 'Bka2018_footer_copy_text' );
+				echo Bka2020\Api\Customizer::text( 'Bka2020_footer_copy_text' );
 			?>
 		</p>
 	</footer>

@@ -10,7 +10,7 @@ Template Post Type: post, page, event
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package Bka2018
+ * @package Bka2020
  */
 
 get_header();
@@ -47,7 +47,7 @@ the_title( '<h1 class="text-white font-normal pl-8 entry-title pt-4">', '</h1>' 
 						the_content();
 
 						wp_link_pages( array(
-							'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'Bka2018' ),
+							'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'Bka2020' ),
 							'after'  => '</div>',
 						) );
 

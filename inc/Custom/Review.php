@@ -1,5 +1,5 @@
 <?php
-namespace Bka2018\Custom;
+namespace Bka2020\Custom;
 
 /**
  * Custom
@@ -11,11 +11,11 @@ class Review
 	{
 
 
-		add_action( 'eventorganiser_created_event', array( $this, 'bka2018_link_review' ), 10, 1 );
-    // add_action( 'wp_ajax_bka2018_load_more', array( $this, 'bka2018_load_more' ) );
+		add_action( 'eventorganiser_created_event', array( $this, 'Bka2020_link_review' ), 10, 1 );
+    // add_action( 'wp_ajax_Bka2020_load_more', array( $this, 'Bka2020_load_more' ) );
 	}
 
-  public function bka2018_link_review($post_id)
+  public function Bka2020_link_review($post_id)
 	{
 
 		// // first console log that we have created event

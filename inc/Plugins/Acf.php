@@ -4,10 +4,10 @@
  *
  * @link https://github.com/elliotcondon/acf
  *
- * @package Bka2018
+ * @package Bka2020
  */
 
-namespace Bka2018\Plugins;
+namespace Bka2020\Plugins;
 
 class Acf
 {
@@ -17,11 +17,11 @@ class Acf
      */
     public function register()
     {
-        add_filter( 'acf/settings/save_json', array( &$this, 'Bka2018_acf_json_save_point' ) );
-        add_filter( 'acf/settings/load_json', array( &$this, 'Bka2018_acf_json_load_point' ) );
+        add_filter( 'acf/settings/save_json', array( &$this, 'Bka2020_acf_json_save_point' ) );
+        add_filter( 'acf/settings/load_json', array( &$this, 'Bka2020_acf_json_load_point' ) );
     }
 
-    public function Bka2018_acf_json_save_point( $path )
+    public function Bka2020_acf_json_save_point( $path )
     {
         // update path
         $path = get_stylesheet_directory() . '/acf-json';
@@ -30,7 +30,7 @@ class Acf
         return $path;
     }
 
-    public function Bka2018_acf_json_load_point( $paths )
+    public function Bka2020_acf_json_load_point( $paths )
     {
         // remove original path (optional)
         unset( $paths[0] );

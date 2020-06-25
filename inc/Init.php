@@ -5,10 +5,10 @@
  * Every function, hook and action is properly divided and organized inside related folders and files
  * Use the file `config/custom/custom.php` to write your custom functions
  *
- * @package Bka2018
+ * @package Bka2020
  */
 
-namespace Bka2018;
+namespace Bka2020;
 
 final class Init
 {

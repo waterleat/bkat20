@@ -1,5 +1,5 @@
 /*
- * Bka2018 uses AWPS which uses Laravel Mix
+ * Bka2020 uses AWPS which uses Laravel Mix
  *
  * Check the documentation at
  * https://laravel.com/docs/5.6/mix

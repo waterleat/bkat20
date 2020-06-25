@@ -2,10 +2,10 @@
 /**
  * Callbacks for Settings API
  *
- * @package Bka2018
+ * @package Bka2020
  */
 
-namespace Bka2018\Api\Callbacks;
+namespace Bka2020\Api\Callbacks;
 
 /**
  * Settings API Callbacks Class
@@ -22,12 +22,12 @@ class SettingsCallback
 		echo '<div class="wrap"><h1 class="text-4xl font-bold">FAQ Page</h1></div>';
 	}
 
-	public function Bka2018_options_group( $input )
+	public function Bka2020_options_group( $input )
 	{
 		return $input;
 	}
 
-	public function Bka2018_admin_index()
+	public function Bka2020_admin_index()
 	{
 		echo 'Customize this Theme Settings section and add description and instructions';
 	}

@@ -1,6 +1,6 @@
 <?php
 
-namespace Bka2018\Custom;
+namespace Bka2020\Custom;
 
 /**
  * Extras.

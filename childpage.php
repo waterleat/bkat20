@@ -12,7 +12,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package Bka2018
+ * @package Bka2020
  */
 
 $parent_page_id = wp_get_post_parent_id( $post_ID );

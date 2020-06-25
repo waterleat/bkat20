@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Creating_an_Error_404_Page
  *
- * @package Bka2018
+ * @package Bka2020
  */
 
 get_header(); ?>
@@ -20,7 +20,7 @@ get_header(); ?>
 	<div id="primary" class="content-area w-full md:w-2/3 p-4">
 		<main id="main" class="site-main" role="main">
 
-			<h1 class=""><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'Bka2018' ); ?></h1>
+			<h1 class=""><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'Bka2020' ); ?></h1>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

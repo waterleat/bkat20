@@ -1,6 +1,6 @@
 <?php
 
-namespace Bka2018\Core;
+namespace Bka2020\Core;
 
 use Walker_Nav_Menu;
 

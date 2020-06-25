@@ -2,10 +2,10 @@
 /**
  * Build Gutenberg Blocks
  *
- * @package Bka2018
+ * @package Bka2020
  */
 
-namespace Bka2018\Api;
+namespace Bka2020\Api;
 
 /**
  * Customizer class
@@ -143,7 +143,7 @@ class Gutenberg
 		) );
 
 		// register_block_type( 'gutenberg-test/latest-post', array(
-		// 	'render_callback' => array( $this, 'Bka2018_render_block_latest_post' ),
+		// 	'render_callback' => array( $this, 'Bka2020_render_block_latest_post' ),
 		// 	'editor_style' => 'gutenberg-test',
 		// 	'style' => 'gutenberg-test'
 		// ) );
@@ -191,7 +191,7 @@ class Gutenberg
     // ) );
 	}
 
-	// public function Bka2018_render_block_latest_post( $attributes )
+	// public function Bka2020_render_block_latest_post( $attributes )
 	// {
 	// 	$recent_posts = wp_get_recent_posts( array(
 	// 		'numberposts' => 1,
@@ -206,7 +206,7 @@ class Gutenberg
 	// 	$post_id = $post[ 'ID' ];
 	//
 	// 	return sprintf(
-	// 		'<a class="wp-block-Bka2018-latest-post" href="%1$s">%2$s</a>',
+	// 		'<a class="wp-block-Bka2020-latest-post" href="%1$s">%2$s</a>',
 	// 		esc_url( get_permalink( $post_id ) ),
 	// 		esc_html( get_the_title( $post_id ) )
 	// 	);

@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#search-result
  *
- * @package Bka2018
+ * @package Bka2020
  */
 
 get_header(); ?>
@@ -28,7 +28,7 @@ get_header(); ?>
 					<?php
 					printf(
 						/* translators: %s: Search Term. */
-						esc_html__( 'Search Results for: %s', 'Bka2018' ), '<span>' . get_search_query() . '</span>'
+						esc_html__( 'Search Results for: %s', 'Bka2020' ), '<span>' . get_search_query() . '</span>'
 					);
 					?>
 				</h2>

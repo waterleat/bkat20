@@ -3,7 +3,7 @@
  * Helpers methods
  * List all your static functions you wish to use globally on your theme
  *
- * @package Bka2018
+ * @package Bka2020
  */
 
 if ( ! function_exists( 'dd' ) ) {

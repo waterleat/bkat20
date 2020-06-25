@@ -7,7 +7,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package Bka2018
+ * @package Bka2020
  */
 
 /*
@@ -30,17 +30,17 @@ endif;
 			<?php
 				printf(
 					/* translators: 1: Comments count. */
-					esc_html( _n( '%d Comment.', '%d Comments.', get_comments_number(), 'Bka2018' ) ), absint( get_comments_number() ) );
+					esc_html( _n( '%d Comment.', '%d Comments.', get_comments_number(), 'Bka2020' ) ), absint( get_comments_number() ) );
 			?>
 		</h2><!-- .comments-title -->
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through? ?>
 		<nav id="comment-nav-above" class="navigation comment-navigation" role="navigation">
-			<h2 class="text-2xl font-bold screen-reader-text"><?php esc_html_e( 'Comment navigation', 'Bka2018' ); ?></h2>
+			<h2 class="text-2xl font-bold screen-reader-text"><?php esc_html_e( 'Comment navigation', 'Bka2020' ); ?></h2>
 			<div class="nav-links">
 
-				<div class="nav-previous"><?php previous_comments_link( esc_html__( 'Older Comments', 'Bka2018' ) ); ?></div>
-				<div class="nav-next"><?php next_comments_link( esc_html__( 'Newer Comments', 'Bka2018' ) ); ?></div>
+				<div class="nav-previous"><?php previous_comments_link( esc_html__( 'Older Comments', 'Bka2020' ) ); ?></div>
+				<div class="nav-next"><?php next_comments_link( esc_html__( 'Newer Comments', 'Bka2020' ) ); ?></div>
 
 			</div><!-- .nav-links -->
 		</nav><!-- #comment-nav-above -->
@@ -57,11 +57,11 @@ endif;
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through? ?>
 		<nav id="comment-nav-below" class="navigation comment-navigation" role="navigation">
-			<h2 class="text-2xl font-bold screen-reader-text"><?php esc_html_e( 'Comment navigation', 'Bka2018' ); ?></h2>
+			<h2 class="text-2xl font-bold screen-reader-text"><?php esc_html_e( 'Comment navigation', 'Bka2020' ); ?></h2>
 			<div class="nav-links">
 
-				<div class="nav-previous"><?php previous_comments_link( esc_html__( 'Older Comments', 'Bka2018' ) ); ?></div>
-				<div class="nav-next"><?php next_comments_link( esc_html__( 'Newer Comments', 'Bka2018' ) ); ?></div>
+				<div class="nav-previous"><?php previous_comments_link( esc_html__( 'Older Comments', 'Bka2020' ) ); ?></div>
+				<div class="nav-next"><?php next_comments_link( esc_html__( 'Newer Comments', 'Bka2020' ) ); ?></div>
 
 			</div><!-- .nav-links -->
 		</nav><!-- #comment-nav-below -->
@@ -75,7 +75,7 @@ endif;
 	if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
 	?>
 
-		<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'Bka2018' ); ?></p>
+		<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'Bka2020' ); ?></p>
 	<?php
 	endif;
 

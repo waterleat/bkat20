@@ -5,7 +5,7 @@
 include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
 
 // check for plugin using plugin name
-if (! is_plugin_active( 'bka2019ds/bka2019ds-plugin.php' ) ) {
+if (! is_plugin_active( 'bkap20/bkap20-plugin.php' ) ) {
     //plugin is not activated
     wp_redirect( esc_url( home_url( '/' ) ), 307 );
 }

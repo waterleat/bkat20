@@ -9,7 +9,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package Bka2018
+ * @package Bka2020
  */
 ?>
 	<?php
@@ -43,7 +43,7 @@
 				the_content();
 
 				wp_link_pages( array(
-					'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'Bka2018' ),
+					'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'Bka2020' ),
 					'after'  => '</div>',
 				) );
 

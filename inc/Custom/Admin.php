@@ -1,9 +1,9 @@
 <?php
 
-namespace Bka2018\Custom;
+namespace Bka2020\Custom;
 
-use Bka2018\Api\Settings;
-use Bka2018\Api\Callbacks\SettingsCallback;
+use Bka2020\Api\Settings;
+use Bka2020\Api\Callbacks\SettingsCallback;
 
 /**
  * Admin
@@ -60,19 +60,19 @@ class Admin
 	{
 		// Scripts multidimensional array with styles and scripts
 		$scripts = array(
-			'script' => array( 
-				'jquery', 
+			'script' => array(
+				'jquery',
 				'media_uploader',
 				get_template_directory_uri() . '/assets/dist/js/admin.js'
 			),
-			'style' => array( 
+			'style' => array(
 				get_template_directory_uri() . '/assets/dist/css/admin.css',
 				'wp-color-picker'
 			)
 		);
 
 		// Pages array to where enqueue scripts
-		$pages = array( 'toplevel_page_Bka2018' );
+		$pages = array( 'toplevel_page_Bka2020' );
 
 		// Enqueue files in Admin area
 		$this->settings->admin_enqueue( $scripts, $pages );
@@ -89,13 +89,13 @@ class Admin
 	{
 		// Scripts multidimensional array with styles and scripts
 		$scripts = array(
-			'style' => array( 
+			'style' => array(
 				get_template_directory_uri() . '/assets/dist/css/admin.css',
 			)
 		);
 
 		// Pages array to where enqueue scripts
-		$pages = array( 'Bka2018_page_Bka2018_faq' );
+		$pages = array( 'Bka2020_page_Bka2020_faq' );
 
 		// Enqueue files in Admin area
 		$settings->admin_enqueue( $scripts, $pages )->register();
@@ -112,7 +112,7 @@ class Admin
 				'page_title' => 'AWPS Admin Page',
 				'menu_title' => 'AWPS',
 				'capability' => 'manage_options',
-				'menu_slug' => 'Bka2018',
+				'menu_slug' => 'Bka2020',
 				'callback' => array( $this->callback, 'admin_index' ),
 				'icon_url' => get_template_directory_uri() . '/assets/dist/images/admin-icon.png',
 				'position' => 110,
@@ -121,11 +121,11 @@ class Admin
 
 		$admin_subpages = array(
 			array(
-				'parent_slug' => 'Bka2018',
-				'page_title' => 'Bka2018 FAQ',
+				'parent_slug' => 'Bka2020',
+				'page_title' => 'Bka2020 FAQ',
 				'menu_title' => 'FAQ',
 				'capability' => 'manage_options',
-				'menu_slug' => 'Bka2018_faq',
+				'menu_slug' => 'Bka2020_faq',
 				'callback' => array( $this->callback, 'admin_faq' )
 			)
 		);
@@ -145,13 +145,13 @@ class Admin
 		// Register settings
 		$args = array(
 			array(
-				'option_group' => 'Bka2018_options_group',
+				'option_group' => 'Bka2020_options_group',
 				'option_name' => 'first_name',
-				'callback' => array( $this->callback, 'Bka2018_options_group' )
+				'callback' => array( $this->callback, 'Bka2020_options_group' )
 			),
 			array(
-				'option_group' => 'Bka2018_options_group',
-				'option_name' => 'Bka2018_test2'
+				'option_group' => 'Bka2020_options_group',
+				'option_name' => 'Bka2020_test2'
 			)
 		);
 
@@ -169,10 +169,10 @@ class Admin
 		// Register sections
 		$args = array(
 			array(
-				'id' => 'Bka2018_admin_index',
+				'id' => 'Bka2020_admin_index',
 				'title' => 'Settings',
-				'callback' => array( $this->callback, 'Bka2018_admin_index' ),
-				'page' => 'Bka2018'
+				'callback' => array( $this->callback, 'Bka2020_admin_index' ),
+				'page' => 'Bka2020'
 			)
 		);
 
@@ -193,8 +193,8 @@ class Admin
 				'id' => 'first_name',
 				'title' => 'First Name',
 				'callback' => array( $this->callback, 'first_name' ),
-				'page' => 'Bka2018',
-				'section' => 'Bka2018_admin_index',
+				'page' => 'Bka2020',
+				'section' => 'Bka2020_admin_index',
 				'args' => array(
 					'label_for' => 'first_name',
 					'class' => ''

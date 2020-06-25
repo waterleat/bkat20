@@ -1,8 +1,8 @@
 {
-	"name": "alecaddd/bka2018",
-	"description": "Alecaddd WordPress Starter Theme for savvy developers",
+	"name": "Bka2020",
+	"description": "A theme for BKA to resemble striking_r, based on Alecaddd WordPress Starter Theme AWPS",
 	"keywords": ["WordPress", "Theme", "Starter"],
-	"homepage": "https://github.com/waterleat/bka2018",
+	"homepage": "https://github.com/waterleat/bka2020",
 	"license": "GPL-3.0",
 	"version": "3.0.0",
 	"authors": [
@@ -23,7 +23,7 @@
 		"php-parallel-lint/php-parallel-lint": "^1.2"
 	},
 	"autoload": {
-		"psr-4": { "Bka2018\\": "./inc" },
+		"psr-4": { "Bka2020\\": "./inc" },
 		"files": [ "./inc/Helpers.php" ]
 	}
 }

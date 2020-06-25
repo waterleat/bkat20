@@ -1,4 +1,4 @@
-# ![Bka2018](http://www.alecaddd.com/wp-content/uploads/2017/05/Bka2018-logo.png)
+# ![Bka2020](http://www.alecaddd.com/wp-content/uploads/2017/05/Bka2018-logo.png)
 > A Modern WordPress Starter Theme for savvy Developers
 
 [![Build Status](https://travis-ci.org/Alecaddd/Bka2018.svg?branch=master)](https://travis-ci.org/Alecaddd/Bka2018) ![Dependecies](https://david-dm.org/Alecaddd/Bka2018.svg) ![NPM latest](https://img.shields.io/npm/v/npm.svg) ![GPL License](https://img.shields.io/badge/license-GPLv3-blue.svg) [![Code Climate](https://codeclimate.com/github/Alecaddd/Bka2018/badges/gpa.svg)](https://codeclimate.com/github/Alecaddd/Bka2018)

@@ -2,14 +2,14 @@
 /**
  * Theme Customizer
  *
- * @package Bka2018
+ * @package Bka2020
  */
 
-namespace Bka2018\Api;
+namespace Bka2020\Api;
 
-use Bka2018\Api\Customizer\Sidebar;
-use Bka2018\Api\Customizer\Header;
-use Bka2018\Api\Customizer\Footer;
+use Bka2020\Api\Customizer\Sidebar;
+use Bka2020\Api\Customizer\Header;
+use Bka2020\Api\Customizer\Footer;
 
 /**
  * Customizer class
@@ -62,12 +62,12 @@ class Customizer
 	public function output()
 	{
 		echo '<!--Customizer CSS--> <style type="text/css">';
-			echo self::css( '#sidebar', 'background-color', 'Bka2018_sidebar_background_color' );
-			echo self::css( '.site-footer', 'background-color', 'Bka2018_footer_background_color' );
-			echo self::css( '.site-header', 'background-color', 'Bka2018_header_background_color' );
-			echo self::css( '.site-header', 'color', 'Bka2018_header_text_color' );
-			echo self::css( '.site-title', 'color', 'Bka2018_header_link_color' );
-			echo self::css( '.site-title a:visited', 'color', 'Bka2018_header_link_color' );
+			echo self::css( '#sidebar', 'background-color', 'Bka2020_sidebar_background_color' );
+			echo self::css( '.site-footer', 'background-color', 'Bka2020_footer_background_color' );
+			echo self::css( '.site-header', 'background-color', 'Bka2020_header_background_color' );
+			echo self::css( '.site-header', 'color', 'Bka2020_header_text_color' );
+			echo self::css( '.site-title', 'color', 'Bka2020_header_link_color' );
+			echo self::css( '.site-title a:visited', 'color', 'Bka2020_header_link_color' );
 		echo '</style><!--/Customizer CSS-->';
 	}
 

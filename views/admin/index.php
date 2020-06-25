@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/reference/functions/add_menu_page/
  *
- * @package Bka2018
+ * @package Bka2020
  */
 
 ?>
@@ -14,8 +14,8 @@
 	<?php settings_errors(); ?>
 
 	<form method="post" action="options.php">
-		<?php settings_fields( 'Bka2018_options_group' ); ?>
-		<?php do_settings_sections( 'Bka2018' ); ?>
+		<?php settings_fields( 'Bka2020_options_group' ); ?>
+		<?php do_settings_sections( 'Bka2020' ); ?>
 		<?php submit_button(); ?>
 	</form>
 </div>

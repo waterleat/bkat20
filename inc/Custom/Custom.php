@@ -1,6 +1,6 @@
 <?php
 
-namespace Bka2018\Custom;
+namespace Bka2020\Custom;
 
 /**
  * Custom
@@ -33,7 +33,7 @@ class Custom
 			// 	'plural' => 'Officers',
 			// 	'menu_icon' => 'dashicons-universal-access-alt',
 			// 	'menu_position' => 18,
-			// 	'text_domain' => 'Bka2018',
+			// 	'text_domain' => 'Bka2020',
 			// 	'supports' => array( 'title', 'editor', /*'thumbnail' , 'excerpt', 'author', 'comments'*/ ),
 			// 	'show_in_rest' => true,
 			// 	'description' => 'Officers Custom Post Type',
@@ -111,7 +111,7 @@ class Custom
 				'plural'  => 'Reviews',
 				'menu_icon' => 'dashicons-book-alt',
 				'menu_position' => 18,
-				'text_domain' => 'Bka2018',
+				'text_domain' => 'Bka2020',
 				'supports' => array( 'title', 'editor', 'thumbnail' , 'excerpt', 'author', 'comments', 'custom-fields' ),
 				'show_in_rest' => true,
 				'description' => 'Reviews Custom Post Type',
@@ -148,15 +148,15 @@ class Custom
 				'singular_name'      => _x( $custom_post['singular'], 'post type singular name', $custom_post['text_domain'] ),
 				'menu_name'          => _x( $custom_post['plural'], 'admin menu', $custom_post['text_domain'] ),
 				'name_admin_bar'     => _x( $custom_post['singular'], 'add new on admin bar', $custom_post['text_domain'] ),
-				'add_new'            => _x( 'Add New ' . $custom_post['singular'], ' Bka2018' ),
-				'add_new_item'       => __( 'Add New ' . $custom_post['singular'], ' Bka2018' ),
-				'new_item'           => __( 'New ' . $custom_post['singular'], ' Bka2018' ),
-				'edit_item'          => __( 'Edit ' . $custom_post['singular'], ' Bka2018' ),
-				'view_item'          => __( 'View ' . $custom_post['singular'], ' Bka2018' ),
-				'view_items'         => __( 'View ' . $custom_post['plural'], ' Bka2018' ),
-				'all_items'          => __( 'All ' . $custom_post['plural'], ' Bka2018' ),
-				'search_items'       => __( 'Search' . $custom_post['plural'], ' Bka2018' ),
-				'parent_item_colon'  => __( 'Parent ' . $custom_post['plural'], ' Bka2018' ),
+				'add_new'            => _x( 'Add New ' . $custom_post['singular'], ' Bka2020' ),
+				'add_new_item'       => __( 'Add New ' . $custom_post['singular'], ' Bka2020' ),
+				'new_item'           => __( 'New ' . $custom_post['singular'], ' Bka2020' ),
+				'edit_item'          => __( 'Edit ' . $custom_post['singular'], ' Bka2020' ),
+				'view_item'          => __( 'View ' . $custom_post['singular'], ' Bka2020' ),
+				'view_items'         => __( 'View ' . $custom_post['plural'], ' Bka2020' ),
+				'all_items'          => __( 'All ' . $custom_post['plural'], ' Bka2020' ),
+				'search_items'       => __( 'Search' . $custom_post['plural'], ' Bka2020' ),
+				'parent_item_colon'  => __( 'Parent ' . $custom_post['plural'], ' Bka2020' ),
 				'not_found'          => __( 'No ' . $custom_post['plural'] . ' found.', $custom_post['text_domain'] ),
 				'not_found_in_trash' => __( 'No ' . $custom_post['plural'] . ' found in Trash.', $custom_post['text_domain'] ),
 			);

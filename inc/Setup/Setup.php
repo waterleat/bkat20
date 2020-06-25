@@ -1,6 +1,6 @@
 <?php
 
-namespace Bka2018\Setup;
+namespace Bka2020\Setup;
 
 class Setup
 {
@@ -20,7 +20,7 @@ class Setup
          * You can activate this if you're planning to build a multilingual theme
          */
 
-        //load_theme_textdomain( 'Bka2018', get_template_directory() . '/languages' );
+        //load_theme_textdomain( 'Bka2020', get_template_directory() . '/languages' );
 
         /*
          * Default Theme Support options better have
@@ -40,7 +40,7 @@ class Setup
             'caption',
         ) );
 
-        add_theme_support( 'custom-background', apply_filters( 'Bka2018_custom_background_args', array(
+        add_theme_support( 'custom-background', apply_filters( 'Bka2020_custom_background_args', array(
             'default-color' => 'ffffff',
             'default-image' => '',
         ) ) );

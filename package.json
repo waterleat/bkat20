@@ -1,5 +1,5 @@
 {
-  "name": "Bka2018",
+  "name": "Bka2020",
   "version": "3.0.4",
   "description": "Alecaddd WordPress Starter Theme for savvy developers",
   "main": "index.js",
@@ -30,7 +30,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/waterleat/bka2018.git"
+    "url": "git+https://github.com/waterleat/bka2020.git"
   },
   "keywords": [
     "wordpress",
@@ -40,9 +40,9 @@
   "author": "David Street <google@davidstreet.org> (http://davidstreet.org)",
   "license": "GPL-3.0",
   "bugs": {
-    "url": "https://github.com/waterleat/bka2018/issues"
+    "url": "https://github.com/waterleat/bka2020/issues"
   },
-  "homepage": "https://github.com/waterleat/bka2018#readme",
+  "homepage": "https://github.com/waterleat/bka2020#readme",
   "dependencies": {
     "jscs": "^3.0.7",
     "jshint": "^2.11.1"
