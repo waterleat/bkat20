@@ -25,7 +25,7 @@
 <body <?php body_class(); ?>   style="background-image: url(<?php bloginfo('template_directory') ?>/assets/dist/images/navy_blue.png ); background-repeat: repeat;  background-attachment: scroll; ">
 	<!-- can style be added using wp_body_open -->
 	<?php wp_body_open(); ?>
-	<div id="page" class="site w-full xs:container mx-auto text-grey055 font-body text-sm lg:text-base" <?php echo ! is_customize_preview() ?'': 'style="padding: 0 40px;"'; ?>>
+	<div id="page" class="site w-full md:container mx-auto text-grey055 font-body text-sm lg:text-base" <?php echo ! is_customize_preview() ?'': 'style="padding: 0 40px;"'; ?>>
 		<header id="masthead" class="w-full bg-white" style="background-image: url(<?php bloginfo('template_directory') ?>/assets/dist/images/BKA_text1.jpg ); background-repeat: no-repeat; background-position: center center; background-attachment: scroll; background-size: 100% auto;">
 
 				<div id="headerblock" class="relative flex flex-col  md:flex-row h-auto px-3"  role="banner">
@@ -35,31 +35,29 @@
 					}
 					?>
 
-					<div class="logo mx-auto md:ml-0 pt-2 md:pt-0 md:pb-4  md:my-0 px-2">
+					<div class="logo mx-auto md:ml-0 pb-6 md:pt-0 md:pb-4  md:my-0 px-2">
 						<?php // the_custom_logo(); ?>
 						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 							<img src="<?php bloginfo('template_directory') ?>/assets/dist/images/BKA_logo.png" class="">
 						</a>
 					</div>
 
-					<div class="block  md:absolute md:top-0 md:right-0">
-						<div class="w-full md:w-48 md:mt-4 md:mr-4">
-							<!-- <p> -->
+					<div class="absolute top-0 right-0">
+						<div class="flex flex-col justify-around content-around md:flex-row md:w-80 h-full my-4 mr-2 md:mr-0">
 								<?php
 									if (is_user_logged_in()) { ?>
-										<a href="<?php echo esc_url( wp_logout_url( home_url() )) ?>" class="m-0 py-2 md:px-3 bg-orange-600 border border-orange-600 rounded text-white text-center hover:bg-orange-700 hover:no-underline" alt="<?php esc_attr_e( 'Logout', 'textdomain' ); ?>">
-											<span class="dashicons dashicons-admin-home"></span> Logout</a>
-											<a href="<?php echo get_page_link( get_page_by_title( 'ind member' )->ID ); ?>" class="ml-4 text-black<?php echo (is_user_logged_in() ? ' ' : ' hidden') ?>"><span class="text-2xl dashicons dashicons-universal-access-alt hover:text-blue-700 hover:no-underline" alt="member profile" title="member profile"></span>
+										<a href="<?php echo esc_url( wp_logout_url( home_url() )) ?>" class=" py-1 md:py-2 px-2 md:px-3 bg-orange-600 border border-orange-600 rounded text-white text-center hover:bg-orange-700 hover:no-underline" alt="<?php esc_attr_e( 'Logout', 'textdomain' ); ?>">
+											<span class="dashicons dashicons-migrate"></span> Logout</a>
+											<a href="<?php echo get_page_link( get_page_by_title( 'ind member' )->ID ); ?>" class="mx-auto md:mx-4 my-3 md:my-2 text-black<?php echo (is_user_logged_in() ? ' ' : ' hidden') ?>"><span class="text-2xl dashicons dashicons-universal-access-alt hover:text-blue-700 hover:no-underline" alt="member profile" title="member profile"></span>
 											</a>
+											<a href="<?php echo get_page_link( get_page_by_title( 'member options' )->ID ); ?>" class="py-1 md:py-2 px-2 md:px-3 bg-orange-600 border border-orange-600 rounded text-white text-center hover:bg-orange-700 hover:no-underline" alt="<?php esc_attr_e( 'Options', 'textdomain' ); ?>"><span class="dashicons dashicons-admin-settings"></span> Options</a>
 										<?php
 									} else { ?>
-										<a href="<?php echo esc_url( wp_login_url( get_permalink() )) ?>" class="m-0 py-2 md:px-3 bg-orange-600 border border-orange-600 rounded text-white text-center hover:bg-orange-700 hover:no-underline" alt="<?php esc_attr_e( 'Login', 'textdomain' ); ?>">
-												<span class="dashicons dashicons-admin-home"></span> Login / Register'</a>
+										<a href="<?php echo esc_url( wp_login_url( get_permalink() )) ?>" class=" py-1 md:py-2 px-2 md:px-3 bg-orange-600 border border-orange-600 rounded text-white text-center hover:bg-orange-700 hover:no-underline" alt="<?php esc_attr_e( 'Login', 'textdomain' ); ?>"><span class="dashicons dashicons-admin-home"></span> Login / Register'</a>
 										<?php
 									}
 
 								?>
-							<!-- </p> -->
 						</div>
 					</div>
 

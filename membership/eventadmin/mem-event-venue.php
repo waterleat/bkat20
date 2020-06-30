@@ -38,7 +38,7 @@ $bookeventsall = $mydb->get_results($bookeventsallQuery, ARRAY_A);
     <!-- <form id="eventSelect" action="../scripts/admineditevent.php" method="post"> -->
     <form id="eventVenueSelect" method="post" class="px-4" data-url="<?php echo admin_url('/admin-ajax.php'); ?>">
       <input type="hidden" name="nonce" value="<?php echo wp_create_nonce( 'event_venue_select_nonce' )?>">
-      <div class="flex content-center">
+      <div class="flex content-center flex-wrap">
         <h3 class="self-center my-0 w-32 ">Select Venue</h3>
         <!-- <div class="content-center">
         </div> -->
@@ -103,17 +103,17 @@ $bookeventsall = $mydb->get_results($bookeventsallQuery, ARRAY_A);
 
     <div class="bg-green-300">
       <?php
-        $venues = eo_get_venues();
-        if( $venues ){
-          echo '<ul>';
-          foreach($venues as $venue):
-            // var_dump($venue);
-            // die;
-               $venue_id = (int) $venue->term_id;
-                    printf('<li> %s', esc_html($venue->name) . " " . esc_html(eo_get_venue_lat($venue_id)) . " , " . esc_html(eo_get_venue_lng($venue_id)), '</li>' );
-          endforeach;
-          echo '</ul>';
-        }
+        // $venues = eo_get_venues();
+        // if( $venues ){
+        //   echo '<ul>';
+        //   foreach($venues as $venue):
+        //     // var_dump($venue);
+        //     // die;
+        //        $venue_id = (int) $venue->term_id;
+        //             printf('<li> %s', esc_html($venue->name) . " " . esc_html(eo_get_venue_lat($venue_id)) . " , " . esc_html(eo_get_venue_lng($venue_id)), '</li>' );
+        //   endforeach;
+        //   echo '</ul>';
+        // }
       ?>
     </div>
 

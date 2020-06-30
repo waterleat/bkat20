@@ -164,7 +164,7 @@ $table_grading = 'grading';
 ?>
 
 
-<div id="indMember" class="bg-blue-lightest px-1 sm:px-4 md:px-8 pb-4">
+<div id="indMember" class="bg-blue-100 px-1 sm:px-4 md:px-8 pb-4">
 
   <h2 class="m-0 p-3 ">BKA Number: <?php echo esc_html($memberInfo['BKAno']) ?></h2>
   <div class="flex flex-col md:flex-row mb-2">
