@@ -6,7 +6,7 @@
   $table_memberdojo = 'memberdojo';
   $table_dojo = 'dojo';
 
-  $option = get_option( 'bka2019ds_plugin' );
+  $option = get_option( 'bkap20_plugin' );
 
 
   $mydb = new wpdb( MDB_USER, MDB_PASSWORD, MDB_NAME, MDB_HOST );

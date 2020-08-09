@@ -1,8 +1,4 @@
 <?php
-// $table_member = 'mem_member';
-// $table_memberdojo = 'mem_memberdojo';
-// $table_grade = 'mem_grade';
-// $table_grading = 'mem_grading';
 $table_member = 'member';
 $table_memberdojo = 'memberdojo';
 $table_grade = 'grade';
@@ -25,71 +21,117 @@ if (isset($_GET['dojo'])) {
 
 $mydb = new wpdb( MDB_USER, MDB_PASSWORD, MDB_NAME, MDB_HOST );
 
-$membersQuery = $mydb->get_results($mydb->prepare(
-  // "SELECT Memberno,Forename,Surname,Membershiptype,Membershipstatus,Renewaldue,status,Insurance,
-  //   k.bu AS kendo, k.grade AS KGRADE, x.date, i.bu AS iaido, i.grade AS IGRADE, y.date, j.bu AS jodo, j.grade AS JGRADE, z.date
-  //   FROM mem_member JOIN mem_memberdojo ON BKAno = Memberno
-  //   LEFT JOIN (SELECT * FROM mem_grade WHERE bu = 'Kendo' ) AS k ON k.BKAno = Memberno
-  //   LEFT JOIN (SELECT * FROM mem_grading ORDER BY date) AS x ON x.grading = k.grading
-  //   LEFT JOIN (SELECT * FROM mem_grade WHERE bu = 'Iaido' ) AS i ON i.BKAno = Memberno
-  //   LEFT JOIN (SELECT * FROM mem_grading ORDER BY date) AS y ON y.grading = i.grading
-  //   LEFT JOIN (SELECT * FROM mem_grade WHERE bu = 'Jodo'  ) as j ON j.BKAno = Memberno
-  //   LEFT JOIN (SELECT * FROM mem_grading ORDER BY date) AS z ON z.grading = j.grading
-  //   WHERE Dojo = %d
-  //   ORDER BY Membershipstatus,Memberno ASC, x.date DESC, y.date DESC, z.date DESC",
+// $membersQuery = $mydb->get_results($mydb->prepare(
+//   "SELECT m.BKAno,m.Forename,m.Surname,m.iaido, m.jodo, m.kendo,m.Insurance,
+//   m.Membershiptype, m.Membershipstatus, m.Renewaldue,
+//   gg.date As date,
+//   g.grade, g.Bu, g.grading,
+//   md.status
+//   FROM $table_member AS m
+//   INNER JOIN (SELECT Memberno,dojo,status FROM $table_memberdojo) AS md ON m.BKANo = md.Memberno
+//   LEFT JOIN $table_grade AS g ON g.BKANo = m.BKAno
+//   LEFT JOIN $table_grading AS gg ON g.grading = gg.grading
+//   WHERE md.Dojo = %d
+//   ORDER BY m.BKANo, gg.date ASC",
+//   $dojono
+// ), 'ARRAY_A');
+// // var_dump($membersQuery);
+//
+//   $dms = [];
+//   $mem = -1;
+//   $memno ='';
+//   foreach ($membersQuery as $member) {
+//     // var_dump($member);die;
+//     if ( $memno <> intval($member['BKAno']) ) {
+//       $mem = $mem + 1;
+//       $dms[$mem] = $member;
+//       $memno = esc_html($member['BKAno']);
+//       $dms[$mem]['IGRADE'] = '';
+//       $dms[$mem]['JGRADE'] = '';
+//       $dms[$mem]['KGRADE'] = '';
+//     }
+//     if ($member['Bu']=='Iaido'){
+//       $dms[$mem]['IGRADE'] =  esc_html($member['grade']);
+//     }
+//     elseif ($member['Bu']=='Jodo'){
+//       $dms[$mem]['JGRADE'] =  esc_html($member['grade']);
+//     }
+//     elseif ($member['Bu']=='Kendo'){
+//       $dms[$mem]['KGRADE'] =  esc_html($member['grade']);
+//     }
+//   }
+//   // var_dump($dms);
 
-
-  // "SELECT ms.Memberno, m.iaido, ggi.date As idate, m.jodo, ggj.date as jdate, m.kendo, ggk.date as kdate, g.grade, g.grading, m.Forename,m.Surname,m.Membershiptype,m.Membershipstatus,m.Renewaldue,ms.status,m.Insurance FROM mem_grade g
-  // LEFT JOIN (SELECT gg.grading, gg.date , gg.Bu FROM mem_grading gg WHERE gg.Bu='Iaido' ) AS ggi ON g.grading=ggi.grading
-  // LEFT JOIN (SELECT gg2.grading, gg2.date , gg2.Bu FROM mem_grading gg2 WHERE gg2.Bu='Jodo'  ) AS ggj ON g.grading=ggj.grading
-  // LEFT JOIN (SELECT gg3.grading, gg3.date , gg3.Bu FROM mem_grading gg3 WHERE gg3.Bu='Kendo' ) AS ggk ON g.grading=ggk.grading
-  // LEFT JOIN (SELECT BKAno,Forename,Surname,Membershiptype,Membershipstatus,Renewaldue,Insurance,kendo,iaido,jodo FROM mem_member) AS m ON m.BKAno=g.BKANo
-  // LEFT JOIN (SELECT status, Memberno FROM mem_memberdojo  WHERE Dojo=%d ) AS ms ON g.BKANo=ms.Memberno
-  // WHERE g.BKANo IN (SELECT md.Memberno FROM mem_memberdojo md WHERE md.Dojo=%d)
-  // ORDER BY g.BKANo, ggi.date ASC, ggj.date ASC, ggk.date ASC",
-  "SELECT md.Memberno,
-  gg.date As date,
-  m.iaido, m.jodo, m.kendo,
-  g.grade, g.Bu, g.grading,
-  m.Forename, m.Surname, m.Membershiptype, m.Membershipstatus, m.Renewaldue,
-  md.status,
-  m.Insurance
-  FROM $table_member AS m
-  JOIN $table_memberdojo AS md ON m.BKANo = md.Memberno
-  LEFT JOIN $table_grade AS g ON g.BKANo = md.Memberno
-  LEFT JOIN $table_grading AS gg ON g.grading = gg.grading
-  WHERE md.Dojo = %d
-  ORDER BY m.BKANo, gg.date ASC",
+  $membersQuery = $mydb->get_results($mydb->prepare(
+    "SELECT m.BKAno,m.Forename,m.Surname,m.iaido,m.jodo, m.kendo,m.Insurance,
+    m.Membershiptype, m.Membershipstatus, m.Renewaldue,md.status
+    FROM $table_member m
+    INNER JOIN  $table_memberdojo md ON m.BKAno = md.Memberno
+    WHERE md.Dojo = %d AND md.Memberno<>0
+    ORDER BY m.BKAno",
     $dojono
   ), 'ARRAY_A');
+  // ), 'OBJECT_K');
+  // associative array of row objects, using first column's values as keys (duplicates will be discarded).
   // var_dump($membersQuery);
-
-  $mem = -1;
-  $memno ='';
+  // $dms = [];
+  //
   foreach ($membersQuery as $member) {
-    // var_dump($member);die;
-    // echo '<p>* ', $memno, '</p>';
-    if ( $memno <> intval($member['Memberno']) ) {
-      $mem = $mem + 1;
-      $dms[$mem] = $member;
-      $memno = esc_html($member['Memberno']);
-      $dms[$mem]['IGRADE'] = '';
-      $dms[$mem]['JGRADE'] = '';
-      $dms[$mem]['KGRADE'] = '';
-    }
-    if ($member['Bu']=='Iaido'){
-      $dms[$mem]['IGRADE'] =  esc_html($member['grade']);
-    }
-    elseif ($member['Bu']=='Jodo'){
-      $dms[$mem]['JGRADE'] =  esc_html($member['grade']);
-    }
-    elseif ($member['Bu']=='Kendo'){
-      $dms[$mem]['KGRADE'] =  esc_html($member['grade']);
-    }
-//     else { ($member['bu'])
-// }
+  //   // var_dump($member);
+  //   // die();
+    $no = intval($member['BKAno']);
+    $dms[$no] = $member;
+    $dms[$no]['KGRADE'] = '';
+    $dms[$no]['IGRADE'] = '';
+    $dms[$no]['JGRADE'] = '';
+  //   $member['KGRADE'] = '';
+  //   $member['IGRADE'] = '';
+  //   $member['JGRADE'] = '';
   }
+  // $dms = $membersQuery;
   // var_dump($dms);
+  // echo "<br><br>";
+  // die();
+  // // var_dump($membersQuery);
+  // -- INNER JOIN (SELECT md.BKAno,md.Dojono FROM $table_memberdojo ) AS md ON g.BKANo = md.BKAno
+  // $test = $mydb->get_results($mydb->prepare(
+  //   "SELECT Memberno, g.Bu,g.grade FROM $table_memberdojo md
+  //   JOIN $table_grade g ON md.Memberno=g.BKANo
+  //   WHERE Dojo = %d AND Memberno<>0
+  //   ORDER BY Memberno,  grade ASC",
+  //   $dojono
+  // ), 'ARRAY_A');
+  // var_dump($test);
+  // die();
+
+  $membersGrades = $mydb->get_results($mydb->prepare(
+    "SELECT g.BKANo,g.Bu,g.grade FROM grade g
+      INNER JOIN  $table_memberdojo  md ON g.BKANo = md.Memberno
+      WHERE md.Dojo = %d AND md.Memberno<>0
+      ORDER BY Memberno, grade ASC",
+      $dojono
+    ), 'ARRAY_A');
+  // var_dump($membersGrades);
+  // die();
+
+  foreach ($membersGrades as $grade) {
+    // var_dump($grade);
+    // die();
+    $b = $grade['BKANo'];
+    if ($grade['Bu']=='Iaido'){
+      $dms[$b]['IGRADE'] =  esc_html($grade['grade']);
+    }
+    elseif ($grade['Bu']=='Jodo'){
+      $dms[$b]['JGRADE'] =  esc_html($grade['grade']);
+    }
+    elseif ($grade['Bu']=='Kendo'){
+      $dms[$b]['KGRADE'] =  esc_html($grade['grade']);
+    }
+  }
+  // // var_dump($membersQuery);
+  // var_dump($dms);
+  // die();
+
 ?>
 <div id="adminDojoMembers">
   <h2 class="my-0 py-3 bg-gray-400 text-center">Dojo Members</h2>
@@ -104,7 +146,7 @@ $membersQuery = $mydb->get_results($mydb->prepare(
       <tbody>
         <?php foreach ($dms as $member) { ?>
           <tr>
-            <td class="p-1"><?php echo  esc_html($member['Memberno']) ?></td>
+            <td class="p-1"><?php echo  esc_html($member['BKAno']) ?></td>
             <td class="p-1"><?php echo  esc_html($member['Forename']) ?></td>
             <td class="p-1"><?php echo  esc_html($member['Surname']) ?></td>
             <td class="p-1"><?php echo  esc_html($member['KGRADE']) ?></td>
@@ -119,7 +161,7 @@ $membersQuery = $mydb->get_results($mydb->prepare(
             <td class="">
               <form method="post" class=" inline-block">
                 <input type="hidden" name="dojo" value="<?php echo $dojono ?>">
-                <input type="hidden" name="member" value="<?php echo  esc_html($member['Memberno']) ?>">
+                <input type="hidden" name="member" value="<?php echo  esc_html($member['BKAno']) ?>">
                 <input type="hidden" name="person" value="<?php echo  esc_html($member['Forename']), ' ',  esc_html($member['Surname']) ?>">
                 <input type="hidden" name="status" value="<?php echo  esc_html($member['status']) ?>">
                 <input type="submit" value="Change" class="changeCoach btn-small btn-gray ">

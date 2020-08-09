@@ -1,3 +1,12 @@
+<?php
+/**
+ *
+ *
+ * @link https://codex.wordpress.org/Template_Hierarchy
+ *
+ * @package Bkap20
+ */
+ ?>
 <div class="map w-full px-4 ">
   <h2>option page</h2>
   <div class="flex flex-wrap">
